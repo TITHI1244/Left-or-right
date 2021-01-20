@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+button, input {
+    border-radius: 10px;
+    height: 5vh;
+    background-color: beige;
+    border-color: beige;
+}
+button {
+    margin: 1% auto;
+}
+h1 {
+    margin: 3% auto 1%;
+}
+#counter {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    padding: 3%;
+    background-color: tan;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+.game-div {
+    display: flex;
+    justify-content: center;
+}
+#player-left{
+    background-color: lightyellow;
+    padding: 15%;
+}
+#player-right{
+    background-color: lightgoldenrodyellow;
+    padding: 15%;
+}
+#result {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    z-index: 1;
+    font-size: 2rem;
+    background-color: tan;
+    padding: 5%;
+}
+#restart-btn {
+    width: 25%;
+    margin: auto;
+}
+#winningMsg {
+    margin: 2% auto;
+}
+#winner {
+    font-size: 5rem;
+}
