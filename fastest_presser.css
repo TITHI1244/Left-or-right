@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: auto 0;
   padding: 0;
   text-align: center;
 }
@@ -31,6 +30,7 @@ button {
   color: aliceblue;
   font-weight: 900;
   outline: none;
+  cursor: grab;
 }
 h1 {
   margin: 3% auto 1%;
@@ -44,6 +44,7 @@ h1 {
   border: 1px solid rgb(93, 196, 132);
   border-radius: 50%;
   font-size: 2rem;
+  background-color: rgb(204, 236, 217);
 }
 .game-div {
   display: flex;
@@ -51,15 +52,30 @@ h1 {
   border-top: 1px solid black;
   margin: auto 20%;
 }
-#player-left {
+
+#confetti-s,
+#confetti-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#show-result {
+  position: fixed;
+  top: 25%;
+  left: 45%;
+  background-color: rgb(204, 236, 217);
+  padding: 2%;
+}
+#player-s,
+#player-l {
+  padding: 15%;
+  position: relative;
+}
+#player-s {
   border-right: 1px solid black;
 }
-#player-left,
-#player-right {
-  padding: 18%;
-}
-#player-left p:not(#score-player-left),
-#player-right p:not(#score-player-right) {
+#player-l p:not(#score-player-l),
+#player-s p:not(#score-player-s) {
   color: rgb(93, 196, 132);
   font-size: 1.5rem;
   animation: swing 1s linear infinite alternate;
