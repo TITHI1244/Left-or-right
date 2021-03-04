@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="fastest_presser.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
     <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
 </head>
 <body>
-    <h1>Fastest presser</h1>
-    <div id="counter">
-    </div>
-    <div class="start">
+    <header>
+        <h1>Fastest presser</h1>
+        <div id="counter">
+        </div>
         <div>
-            <input type="number" id="duration">
+            <input type="number" id="game-duration" placeholder="set seconds...">
         </div>
         <div>
             <button id="start-btn">Start game!</button>
         </div>
-    </div>
-    <div class="game-div">
+    </header>
+    <main class="game-div">
         <div id="player-left">
             <p>Press S</p>
             <p id="score-player-left"></p>
@@ -28,12 +30,7 @@
             <p>Press L</p>
             <p id="score-player-right"></p>
         </div>
-    </div>
-    <div id="result">
-        <p id="winner"></p>
-        <p id="winningMsg"></p>
-        <button id="restart-btn">Restart the game!</button>
-    </div>
+    </main>
     <script src="fastest_presser.js"></script>
 </body>
 </html>

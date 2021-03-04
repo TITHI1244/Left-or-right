@@ -1,58 +1,74 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  box-sizing: border-box;
+  margin: auto 0;
+  padding: 0;
+  text-align: center;
 }
-button, input {
-    border-radius: 10px;
-    height: 5vh;
-    background-color: beige;
-    border-color: beige;
+body,
+button,
+input {
+  font-family: cursive;
+}
+input {
+  border-radius: 2px;
+  border-style: ridge;
+  border-color: transparent;
+  border-width: 0.5px;
+  padding: 0.5%;
+  box-shadow: 1px 1px 1px 1px rgb(109, 108, 108);
+  outline: none;
+}
+input:hover {
+  border-color: rgb(93, 196, 132);
+  box-shadow: none;
 }
 button {
-    margin: 1% auto;
+  border-radius: 2px;
+  border-color: transparent;
+  margin: 1% auto;
+  padding: 1%;
+  background-color: rgb(93, 196, 132);
+  color: aliceblue;
+  font-weight: 900;
+  outline: none;
 }
 h1 {
-    margin: 3% auto 1%;
+  margin: 3% auto 1%;
+  font-family: "Press Start 2P", cursive;
 }
 #counter {
-    position: absolute;
-    right: 10%;
-    top: 3%;
-    padding: 3%;
-    background-color: tan;
-    border-radius: 50%;
-    font-size: 2rem;
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  padding: 3%;
+  border: 1px solid rgb(93, 196, 132);
+  border-radius: 50%;
+  font-size: 2rem;
 }
 .game-div {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  margin: auto 20%;
 }
-#player-left{
-    background-color: lightyellow;
-    padding: 15%;
+#player-left {
+  border-right: 1px solid black;
 }
-#player-right{
-    background-color: lightgoldenrodyellow;
-    padding: 15%;
+#player-left,
+#player-right {
+  padding: 18%;
 }
-#result {
-    position: absolute;
-    width: 100%;
-    top: 25%;
-    z-index: 1;
-    font-size: 2rem;
-    background-color: tan;
-    padding: 5%;
+#player-left p:not(#score-player-left),
+#player-right p:not(#score-player-right) {
+  color: rgb(93, 196, 132);
+  font-size: 1.5rem;
+  animation: swing 1s linear infinite alternate;
 }
-#restart-btn {
-    width: 25%;
-    margin: auto;
-}
-#winningMsg {
-    margin: 2% auto;
-}
-#winner {
-    font-size: 5rem;
+@keyframes swing {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
 }
